@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GameTech: Tu tienda líder en venta de consolas de videojuegos." />
+  <title>Gamertech - Historia</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+</head>
+
+<body>
+  <header class="text-center">
+    <h1>Historia y Expansión de Gamertech</h1>
+    <p>Nuestra trayectoria en imágenes y mapa interactivo</p>
+  </header>
+
+  <nav class="nav justify-content-center bg-dark p-2 hover-zoom">
+    <a href="../index.html" class="btn btn-outline-info nav-link text-white">Inicio</a>
+    <a href="consolas.html" class="btn btn-outline-info nav-link text-white">Consolas</a>
+    <a href="ofertas.html" class="btn btn-outline-info nav-link text-white">Ofertas</a>
+    <a href="nosotros.html" class="btn btn-outline-info nav-link text-white">Nosotros</a>
+    <a href="contacto.html" class="btn btn-outline-info nav-link text-white">Contacto</a>
+  </nav>
+
+  <main class="container mt-4">
+    <section id="historia" class="hover-zoom">
+      <h2>Nuestra Historia</h2>
+      <div class="row">
+        <article class="col-md-6">
+          <h3>Fundación en 2010</h3>
+          <p>
+            Gamertech nació como un pequeño local de videojuegos en Medellín,
+            Colombia. Hoy somos una empresa global.
+          </p>
+        </article>
+        <article class="col-md-6">
+          <h3>Expansión Internacional</h3>
+          <p>
+            En 2020 abrimos sedes en México, Argentina y Perú, llegando a toda
+            Latinoamérica.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="timeline" class="hover-zoom">
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year" data-toggle="collapse" data-target="#2010">
+            2010 - Fundación
+          </div>
+          <div id="2010" class="collapse show">
+            <div class="timeline-images">
+              <img src="../images/Linea-Tiempo/primer local.jpg" class="timeline-img" width="225" height="225"
+                alt="Local original" />
+              <img src="../images/Linea-Tiempo/primer equipo.webp" class="timeline-img" width="225" height="225"
+                alt="Primer equipo" />
+              <img src="../images/Linea-Tiempo/tienda.jpg" class="timeline-img" width="225" height="225"
+                alt="Primera tienda" />
+              <img src="../images/Linea-Tiempo/evento.jpg" class="timeline-img" width="225" height="225"
+                alt="Evento apertura" />
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year" data-toggle="collapse" data-target="#2020">
+            2020 - Expansión
+          </div>
+          <div id="2020" class="collapse">
+            <div class="row">
+              <div class="col-md-4 mb-3">
+                <img src="../images/Linea-Tiempo/mexico.png" class="timeline-img" width="225" height="225"
+                  alt="México" />
+                <h4 class="mt-2 text-center">México DF</h4>
+              </div>
+              <div class="col-md-4 mb-3">
+                <img src="../images/Linea-Tiempo/argentina.png" class="timeline-img" width="225" height="225"
+                  alt="Argentina" />
+                <h4 class="mt-2 text-center">Buenos Aires</h4>
+              </div>
+              <div class="col-md-4 mb-3">
+                <img src="../images/Linea-Tiempo/peru.webp" class="timeline-img" width="225" height="225" alt="Perú" />
+                <h4 class="mt-2 text-center">Lima</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year" data-toggle="collapse" data-target="#2025">
+            2025 - Próximamente
+          </div>
+          <div id="2025" class="collapse">
+            <div class="card bg-light mb-3">
+              <div class="card-body text-center">
+                <h3 class="text-muted">Nueva Sede en</h3>
+                <img src="../images/Linea-Tiempo/estados unidos.png" class="img-fluid" style="max-width: 200px"
+                  alt="USA" />
+                <h2 class="mt-3 text-info">Estados Unidos</h2>
+                <p class="text-muted">¡Próxima apertura en Nueva York!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mapaExpansion" class="hover-zoom mt-5">
+      <h2 class="text-center mb-4">Nuestra Presencia Global soñada</h2>
+      <div class="position-relative">
+        <img src="../images/Linea-Tiempo/mapa-america.webp" usemap="#latamMap" class="img-fluid rounded shadow" />
+        <map name="latamMap">
+          <area shape="circle" coords="300,450,20" data-toggle="tooltip" title="Sede México (2020)" class="map-point"
+            data-country="mexico" />
+          <area shape="circle" coords="450,650,20" data-toggle="tooltip" title="Sede Argentina (2020)" class="map-point"
+            data-country="argentina" />
+          <area shape="circle" coords="350,550,20" data-toggle="tooltip" title="Sede Perú (2020)" class="map-point"
+            data-country="peru" />
+          <area shape="circle" coords="200,300,15" data-toggle="tooltip" title="Próxima sede USA (2025)"
+            class="map-point" data-country="usa" />
+        </map>
+
+        <div class="map-highlight"></div>
+        <div class="map-tooltip"></div>
+      </div>
+    </section>
+    <section id="equipo" class="hover-zoom mt-4">
+      <h2>Nuestro Equipo</h2>
+      <div class="row">
+        <article class="col-md-6">
+          <h3>CEO: Daniel Campos</h3>
+          <p>
+            Ingeniero en sistemas con más de 15 años de experiencia en el
+            sector gaming.
+          </p>
+        </article>
+        <article class="col-md-6">
+          <h3>CTO: Fabián Herrera</h3>
+          <p>Especialista en desarrollo de plataformas de e-commerce.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="valores" class="hover-zoom mt-4">
+      <h2>Valores Corporativos</h2>
+      <ul class="list-unstyled">
+        <li class="mb-3">
+          <strong>Innovación:</strong> Siempre a la vanguardia tecnológica.
+        </li>
+        <li class="mb-3">
+          <strong>Transparencia:</strong> Políticas claras para nuestros
+          clientes.
+        </li>
+        <li>
+          <strong>Sostenibilidad:</strong> Comprometidos con el medio
+          ambiente.
+        </li>
+      </ul>
+    </section>
+
+    <section id="reconocimientos" class="hover-zoom mt-4">
+      <h2>Reconocimientos</h2>
+      <ul class="list-group">
+        <li class="list-group-item">
+          Premio "Mejor Tienda Online de Gaming 2022"
+        </li>
+        <li class="list-group-item">
+          Certificación ISO 9001 en calidad de servicio
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="text-center p-3 mt-4">
+    <p>&copy; 2025 Gamertech. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".collapse").not(".show").collapse("hide");
+      $('[data-toggle="tooltip"]').tooltip();
+
+      $(".map-point").hover(
+        function (e) {
+          const coords = $(this).attr("coords").split(",");
+          const x = parseInt(coords[0]);
+          const y = parseInt(coords[1]);
+          const radius = parseInt(coords[2]);
+
+          $(".map-highlight").css({
+            width: radius * 2 + "px",
+            height: radius * 2 + "px",
+            left: x + "px",
+            top: y + "px",
+            opacity: 1,
+          });
+        },
+        function () {
+          $(".map-highlight").css("opacity", 0);
+        }
+      );
+    });
+  </script>
+</body>
+
+</html>

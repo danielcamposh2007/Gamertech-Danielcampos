@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="GameTech: Tu tienda líder en venta de consolas de videojuegos." />
+    <title>Gamertech - Contacto</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+
+
+    </style>
+</head>
+
+<body>
+    <header class="text-center">
+        <h1>Gamertech - Contacto</h1>
+        <p>¡Estamos aquí para ayudarte!</p>
+    </header>
+
+    <nav class="nav justify-content-center bg-dark p-2 hover-zoom">
+        <a href="../index.html" class="btn btn-outline-info nav-link text-white">Inicio</a>
+        <a href="consolas.html" class="btn btn-outline-info nav-link text-white">Consolas</a>
+        <a href="ofertas.html" class="btn btn-outline-info nav-link text-white">Ofertas</a>
+        <a href="nosotros.html" class="btn btn-outline-info nav-link text-white">Nosotros</a>
+        <a href="contacto.html" class="btn btn-outline-info nav-link text-white">Contacto</a>
+    </nav>
+
+    <main class="container mt-4">
+        <section id="formulario" class="hover-zoom mb-5">
+            <h2 class="text-center mb-4">📩 Formulario de Contacto</h2>
+            <form class="col-md-8 mx-auto">
+                <div class="form-group">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" class="form-control game-input" id="nombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" class="form-control game-input" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" class="form-control game-input" id="telefono" pattern="[0-9]{10}">
+                </div>
+
+                <div class="form-group">
+                    <label for="consulta">Tipo de consulta:</label>
+                    <select class="form-control game-input" id="consulta">
+                        <option value="ventas">🎮 Ventas</option>
+                        <option value="soporte">🔧 Soporte Técnico</option>
+                        <option value="devoluciones">🔄 Devoluciones</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea class="form-control game-input" id="mensaje" rows="5"
+                        placeholder="Escribe tu mensaje aquí..." style="resize: none;"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-info btn-block" style="animation: pulse 2s infinite;">🚀 Enviar
+                    Mensaje</button>
+            </form>
+        </section>
+
+        <section id="ubicacion" class="hover-zoom mt-5">
+            <h2 class="text-center mb-4">📍 Nuestra Ubicación</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">🏢 Oficina Principal</h5>
+                            <address class="card-text">
+                                Calle 54 #70 b sur, Medellín<br>
+                                📞 +57 315 269 9638<br>
+                                📧 <a href="mailto:Gamertech@gmail.com" class="text-info">Gamertech@gmail.com</a>
+                            </address>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item rounded"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260604283!2d-75.56951118523148!3d6.198980495504475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e46824f14864127%3A0xf37c1a8e95ef8e2e!2sCl.%2054%20%2370b%20Sur%2C%20Medell%C3%ADn%2C%20Antioquia!5e0!3m2!1sen!2sco!4v1621534874259!5m2!1sen!2sco"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <div id="secret-message">
+            <h3>¡Código Secreto Desbloqueado! 🎉</h3>
+            <p>Gamer Bonus: 10% de descuento con el código: GG-CONTACTO</p>
+        </div>
+    </main>
+
+    <footer class="text-center p-3 mt-4">
+        <p>&copy; 2025 Gamertech. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+        
+        const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+        let konamiIndex = 0;
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === konamiCode[konamiIndex]) {
+                konamiIndex++;
+                if (konamiIndex === konamiCode.length) {
+                    document.getElementById('secret-message').style.display = 'block';
+                    setTimeout(() => {
+                        document.getElementById('secret-message').style.display = 'none';
+                    }, 5000);
+                    konamiIndex = 0;
+                }
+            } else {
+                konamiIndex = 0;
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="GameTech: Tu tienda líder en venta de consolas de videojuegos."
+    />
+    <title>Gamertech - Ofertas</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <header class="hover-zoom">
+      <h1>Gamertech - Ofertas</h1>
+    </header>
+
+    <nav class="nav justify-content-center bg-dark p-2 hover-zoom">
+      <a href="../index.html" class="btn btn-outline-info nav-link text-white"
+        >Inicio</a
+      >
+      <a href="consolas.html" class="btn btn-outline-info nav-link text-white"
+        >Consolas</a
+      >
+      <a href="ofertas.html" class="btn btn-outline-info nav-link text-white"
+        >Ofertas</a
+      >
+      <a href="nosotros.html" class="btn btn-outline-info nav-link text-white"
+        >Nosotros</a
+      >
+      <a href="contacto.html" class="btn btn-outline-info nav-link text-white"
+        >Contacto</a
+      >
+    </nav>
+
+    <main class="container mt-4">
+      <section id="ofertas-semana" class="hover-zoom">
+        <h2>Ofertas de la Semana</h2>
+        <article>
+          <h3>PlayStation 5 + 2 Juegos Gratis</h3>
+          <p>Precio: <del>$599.99</del> <strong>$549.99</strong></p>
+          <ul>
+            <li>Incluye: God of War Ragnarok y Horizon Forbidden West.</li>
+            <li>Envío gratis en compras superiores a $500.</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Xbox Series X + Mando Extra</h3>
+          <p>Precio: <del>$549.99</del> <strong>$499.99</strong></p>
+          <ul>
+            <li>Mando inalámbrico de edición limitada.</li>
+            <li>Garantía de 2 años incluida.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="ofertas-relampago" class="hover-zoom">
+        <h2>Ofertas Relámpago</h2>
+        <article>
+          <h3>Nintendo Switch OLED - 20% de descuento</h3>
+          <p>Precio: <del>$349.99</del> <strong>$279.99</strong></p>
+          <p>Válido hasta agotar existencias.</p>
+          <div class="countdown" id="countdown1"></div>
+        </article>
+
+        <article>
+          <h3>PC Gaming Armada</h3>
+          <p>Precio: <del>$1299.99</del> <strong>$999.99</strong></p>
+          <ul>
+            <li>Procesador: Intel i7-12700K</li>
+            <li>GPU: NVIDIA RTX 3080</li>
+          </ul>
+          <div class="countdown" id="countdown2"></div>
+        </article>
+      </section>
+
+      <section id="ofertas-pasadas" class="hover-zoom">
+        <h2>Ofertas Anteriores</h2>
+        <ul>
+          <li>PlayStation 4 Pro - $299.99 (Agotado)</li>
+          <li>Xbox One S - $199.99 (Agotado)</li>
+          <li>Nintendo 3DS - $149.99 (Agotado)</li>
+        </ul>
+      </section>
+
+      <section id="condiciones" class="hover-zoom">
+        <h2>Condiciones de las Ofertas</h2>
+        <ul>
+          <li>Las ofertas son válidas solo para compras en línea.</li>
+          <li>No acumulables con otros descuentos.</li>
+          <li>Stock limitado.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="text-center p-3 mt-4">
+      <p>&copy; 2025 Gamertech. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+      function setCountdown(id, endTime) {
+        const countdownElement = document.getElementById(id);
+        function updateCountdown() {
+          const now = new Date().getTime();
+          const distance = endTime - now;
+
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          );
+          const minutes = Math.floor(
+            (distance % (1000 * 60 * 60)) / (1000 * 60)
+          );
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+          if (distance < 0) {
+            clearInterval(countdownInterval);
+            countdownElement.innerHTML = "Oferta terminada";
+          }
+        }
+        const countdownInterval = setInterval(updateCountdown, 1000);
+      }
+
+      const endTime1 = new Date("March 14, 2025 23:59:59").getTime();
+      const endTime2 = new Date("March 18, 2025 23:59:59").getTime();
+
+      setCountdown("countdown1", endTime1);
+      setCountdown("countdown2", endTime2);
+    </script>
+  </body>
+</html>
